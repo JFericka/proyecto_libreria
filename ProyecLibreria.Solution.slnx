@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Elementos de la solución/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="ProyecLibreria.Dal/ProyecLibreria.Dal.csproj" Id="8d450809-b64a-46c2-a3c5-322d2b84f859" />
+  <Project Path="ProyecLibreria.Entities/ProyecLibreria.Entities.csproj" Id="d25959bd-fa52-4956-9ab2-690f384401de" />
+  <Project Path="ProyecLibreria.UI/ProyecLibreria.UI.csproj" />
+  <Project Path="ProyectLibreria.Bll/ProyectLibreria.Bll.csproj" Id="855050f4-4b32-4422-96ed-5cc4bf3afb4d" />
+</Solution>
