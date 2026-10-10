@@ -6,27 +6,20 @@ using System.Threading.Tasks;
 
 namespace ProyecLibreria.Entities.Entidades
 {
-    public class UsuariosEntities
+    public class RolEntities
     {
         public int Id { get; private set; }
-        public string Correo { get; private set; } = string.Empty;
-        public byte[] Contraseña { get; private set; } = Array.Empty<byte>();
-        public int RolId { get; private set; }
-        public bool Estado { get; private set; } = true;
-        public DateTime FechaRegistro { get; private set; }
-        public string NombreRol { get; private set; } = string.Empty;
+        public string Nombre { get; private set; } = string.Empty;
+        public bool Activo { get; private set; } = true;
 
-        public string EstadoTexto => Estado ? "Activo" : "Inactivo";
+        public string EstadoTexto => Activo ? "Activo" : "Inactivo";
 
-        public UsuariosEntities() { }
+        public RolEntities() { }
 
-        public UsuariosEntities(string correo, byte[] contraseña, int rolId)
+        public RolEntities(string nombre)
         {
-            CambiarCorreo(correo);
-            CambiarContraseña(contraseña);
-            CambiarRolId(rolId);
-            Estado = true;
-            FechaRegistro = DateTime.Now;
+            CambiarNombre(nombre);
+            Activo = true;
         }
 
         public void AsignarId(int id)
@@ -34,40 +27,16 @@ namespace ProyecLibreria.Entities.Entidades
             Id = id;
         }
 
-        public void CambiarCorreo(string correo)
+        public void CambiarNombre(string nombre)
         {
-            if (string.IsNullOrWhiteSpace(correo))
-                throw new ArgumentException("El correo no puede estar vacío.");
-            Correo = correo.Trim();
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre del rol no puede estar vacío.");
+            Nombre = nombre.Trim();
         }
 
-        public void CambiarContraseña(byte[] contraseña)
+        public void CambiarEstado(bool activo)
         {
-            if (contraseña == null || contraseña.Length == 0)
-                throw new ArgumentException("La contraseña no puede estar vacía.");
-            Contraseña = contraseña;
-        }
-
-        public void CambiarRolId(int rolId)
-        {
-            if (rolId <= 0)
-                throw new ArgumentException("El ID del rol debe ser un número positivo.");
-            RolId = rolId;
-        }
-
-        public void CambiarNombreRol(string nombreRol)
-        {
-            NombreRol = nombreRol?.Trim() ?? string.Empty;
-        }
-
-        public void CambiarEstado(bool estado)
-        {
-            Estado = estado;
-        }
-
-        public void AsignarFechaRegistro(DateTime fecha)
-        {
-            FechaRegistro = fecha;
+            Activo = activo;
         }
     }
 }
