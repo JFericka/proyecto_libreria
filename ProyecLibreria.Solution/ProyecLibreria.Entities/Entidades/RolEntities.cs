@@ -12,8 +12,8 @@ namespace ProyecLibreria.Entities.Entidades
         public string Nombre { get; private set; } = string.Empty;
         public bool Activo { get; private set; } = true;
 
-        public string EstadoTexto => Activo ? "Activo" : "Inactivo";
-
+        public string Estado  => Activo ? "Activo" : "Inactivo";
+        #region
         public RolEntities() { }
 
         public RolEntities(string nombre)
@@ -21,7 +21,10 @@ namespace ProyecLibreria.Entities.Entidades
             CambiarNombre(nombre);
             Activo = true;
         }
+        #endregion
 
+
+        #region Metodos
         public void AsignarId(int id)
         {
             Id = id;
@@ -38,5 +41,6 @@ namespace ProyecLibreria.Entities.Entidades
         {
             Activo = activo;
         }
+        #endregion
     }
 }

@@ -46,6 +46,9 @@ namespace ProyecLibreria.UI.Formularios
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            panel5 = new Panel();
+            panel4 = new Panel();
+            panel3 = new Panel();
             panel2 = new Panel();
             btnCerrar = new Guna.UI2.WinForms.Guna2Button();
             btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
@@ -54,10 +57,14 @@ namespace ProyecLibreria.UI.Formularios
             btnAbastecimiento = new Guna.UI2.WinForms.Guna2Button();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
             label2 = new Label();
             label1 = new Label();
             iconAdmin = new FontAwesome.Sharp.IconPictureBox();
             panel1 = new Panel();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             statusStrip1 = new StatusStrip();
             toolVentas = new ToolStripStatusLabel();
             toolAbastecimiento = new ToolStripStatusLabel();
@@ -68,12 +75,19 @@ namespace ProyecLibreria.UI.Formularios
             panel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconAdmin).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
             guna2GradientPanel1.BackColor = Color.FromArgb(90, 90, 90);
+            guna2GradientPanel1.Controls.Add(panel5);
+            guna2GradientPanel1.Controls.Add(panel4);
+            guna2GradientPanel1.Controls.Add(panel3);
             guna2GradientPanel1.Controls.Add(panel2);
             guna2GradientPanel1.Controls.Add(btnUsuarios);
             guna2GradientPanel1.Controls.Add(btnInventario);
@@ -88,6 +102,30 @@ namespace ProyecLibreria.UI.Formularios
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2GradientPanel1.Size = new Size(343, 1117);
             guna2GradientPanel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = SystemColors.ControlDarkDark;
+            panel5.Location = new Point(3, 398);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(343, 15);
+            panel5.TabIndex = 11;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = SystemColors.ControlDarkDark;
+            panel4.Location = new Point(3, 775);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(343, 15);
+            panel4.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ControlDarkDark;
+            panel3.Location = new Point(0, 247);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(343, 15);
+            panel3.TabIndex = 9;
             // 
             // panel2
             // 
@@ -131,7 +169,7 @@ namespace ProyecLibreria.UI.Formularios
             btnUsuarios.FillColor = Color.FromArgb(109, 129, 150);
             btnUsuarios.Font = new Font("Segoe UI", 9F);
             btnUsuarios.ForeColor = Color.LightSteelBlue;
-            btnUsuarios.Location = new Point(27, 803);
+            btnUsuarios.Location = new Point(28, 817);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnUsuarios.Size = new Size(294, 66);
@@ -149,7 +187,7 @@ namespace ProyecLibreria.UI.Formularios
             btnInventario.FillColor = Color.FromArgb(109, 129, 150);
             btnInventario.Font = new Font("Segoe UI", 9F);
             btnInventario.ForeColor = Color.LightSteelBlue;
-            btnInventario.Location = new Point(27, 666);
+            btnInventario.Location = new Point(27, 562);
             btnInventario.Name = "btnInventario";
             btnInventario.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnInventario.Size = new Size(294, 66);
@@ -169,7 +207,7 @@ namespace ProyecLibreria.UI.Formularios
             btnVentas.ForeColor = Color.LightSteelBlue;
             btnVentas.Image = (Image)resources.GetObject("btnVentas.Image");
             btnVentas.ImageSize = new Size(35, 35);
-            btnVentas.Location = new Point(27, 529);
+            btnVentas.Location = new Point(27, 434);
             btnVentas.Name = "btnVentas";
             btnVentas.Padding = new Padding(10, 0, 0, 0);
             btnVentas.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -190,7 +228,7 @@ namespace ProyecLibreria.UI.Formularios
             btnAbastecimiento.ForeColor = Color.LightSteelBlue;
             btnAbastecimiento.Image = (Image)resources.GetObject("btnAbastecimiento.Image");
             btnAbastecimiento.ImageSize = new Size(35, 35);
-            btnAbastecimiento.Location = new Point(27, 392);
+            btnAbastecimiento.Location = new Point(27, 688);
             btnAbastecimiento.Name = "btnAbastecimiento";
             btnAbastecimiento.Padding = new Padding(10, 0, 0, 0);
             btnAbastecimiento.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -212,7 +250,7 @@ namespace ProyecLibreria.UI.Formularios
             btnDashboard.ForeColor = Color.LightSteelBlue;
             btnDashboard.Image = (Image)resources.GetObject("btnDashboard.Image");
             btnDashboard.ImageSize = new Size(35, 35);
-            btnDashboard.Location = new Point(27, 255);
+            btnDashboard.Location = new Point(27, 297);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(10, 0, 0, 0);
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -224,24 +262,36 @@ namespace ProyecLibreria.UI.Formularios
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(90, 90, 90);
+            guna2Panel1.Controls.Add(tableLayoutPanel1);
             guna2Panel1.Controls.Add(label2);
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(iconAdmin);
             guna2Panel1.CustomizableEdges = customizableEdges13;
-            guna2Panel1.Dock = DockStyle.Top;
-            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Location = new Point(0, 3);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Panel1.Size = new Size(343, 238);
             guna2Panel1.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Location = new Point(341, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(1394, 72);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Copperplate Gothic Bold", 9F);
-            label2.ForeColor = Color.WhiteSmoke;
-            label2.Location = new Point(50, 194);
+            label2.ForeColor = Color.FromArgb(1, 121, 111);
+            label2.Location = new Point(28, 195);
             label2.Name = "label2";
             label2.Size = new Size(272, 26);
             label2.TabIndex = 3;
@@ -253,7 +303,7 @@ namespace ProyecLibreria.UI.Formularios
             label1.AutoSize = true;
             label1.Font = new Font("Perpetua Titling MT", 13.875F, FontStyle.Bold | FontStyle.Italic);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(87, 144);
+            label1.Location = new Point(80, 141);
             label1.Name = "label1";
             label1.Size = new Size(199, 44);
             label1.TabIndex = 2;
@@ -266,7 +316,7 @@ namespace ProyecLibreria.UI.Formularios
             iconAdmin.IconColor = Color.White;
             iconAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconAdmin.IconSize = 138;
-            iconAdmin.Location = new Point(117, 0);
+            iconAdmin.Location = new Point(104, 0);
             iconAdmin.Name = "iconAdmin";
             iconAdmin.Size = new Size(138, 138);
             iconAdmin.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -276,11 +326,46 @@ namespace ProyecLibreria.UI.Formularios
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(90, 90, 90);
+            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(343, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1382, 41);
+            panel1.Size = new Size(1395, 47);
             panel1.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox3.Image = Properties.Resources.water_solid2;
+            pictureBox3.Location = new Point(1062, 3);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(330, 44);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Top;
+            pictureBox2.Image = Properties.Resources.water_solid2;
+            pictureBox2.Location = new Point(532, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(330, 47);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.water_solid2;
+            pictureBox1.Location = new Point(-2, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(330, 44);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -289,9 +374,9 @@ namespace ProyecLibreria.UI.Formularios
             statusStrip1.Dock = DockStyle.Top;
             statusStrip1.ImageScalingSize = new Size(32, 32);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolVentas, toolAbastecimiento, toolUsuarios, toolInventario });
-            statusStrip1.Location = new Point(343, 41);
+            statusStrip1.Location = new Point(343, 47);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1382, 42);
+            statusStrip1.Size = new Size(1395, 64);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -302,7 +387,7 @@ namespace ProyecLibreria.UI.Formularios
             toolVentas.ForeColor = Color.White;
             toolVentas.Name = "toolVentas";
             toolVentas.Padding = new Padding(10, 5, 8, 5);
-            toolVentas.Size = new Size(124, 32);
+            toolVentas.Size = new Size(124, 54);
             toolVentas.Text = "Ventas";
             // 
             // toolAbastecimiento
@@ -310,7 +395,7 @@ namespace ProyecLibreria.UI.Formularios
             toolAbastecimiento.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold);
             toolAbastecimiento.ForeColor = Color.White;
             toolAbastecimiento.Name = "toolAbastecimiento";
-            toolAbastecimiento.Size = new Size(219, 32);
+            toolAbastecimiento.Size = new Size(219, 54);
             toolAbastecimiento.Text = "Abastecimiento";
             // 
             // toolUsuarios
@@ -318,7 +403,7 @@ namespace ProyecLibreria.UI.Formularios
             toolUsuarios.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold);
             toolUsuarios.ForeColor = Color.White;
             toolUsuarios.Name = "toolUsuarios";
-            toolUsuarios.Size = new Size(128, 32);
+            toolUsuarios.Size = new Size(128, 54);
             toolUsuarios.Text = "Usuarios";
             // 
             // toolInventario
@@ -326,23 +411,23 @@ namespace ProyecLibreria.UI.Formularios
             toolInventario.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold);
             toolInventario.ForeColor = Color.White;
             toolInventario.Name = "toolInventario";
-            toolInventario.Size = new Size(150, 32);
+            toolInventario.Size = new Size(150, 54);
             toolInventario.Text = "Inventario";
             // 
             // panelContenedor
             // 
             panelContenedor.BackColor = Color.White;
             panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(343, 83);
+            panelContenedor.Location = new Point(343, 111);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1382, 1034);
+            panelContenedor.Size = new Size(1395, 1006);
             panelContenedor.TabIndex = 3;
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1725, 1117);
+            ClientSize = new Size(1738, 1117);
             Controls.Add(panelContenedor);
             Controls.Add(statusStrip1);
             Controls.Add(panel1);
@@ -358,6 +443,10 @@ namespace ProyecLibreria.UI.Formularios
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconAdmin).EndInit();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ResumeLayout(false);
@@ -384,5 +473,12 @@ namespace ProyecLibreria.UI.Formularios
         private ToolStripStatusLabel toolUsuarios;
         private ToolStripStatusLabel toolInventario;
         private Panel panelContenedor;
+        private Panel panel5;
+        private Panel panel4;
+        private Panel panel3;
+        private TableLayoutPanel tableLayoutPanel1;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
     }
 }
